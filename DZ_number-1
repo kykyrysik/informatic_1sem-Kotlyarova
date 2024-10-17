@@ -1,1 +1,11 @@
-print ("hello world")
+G,s = input().split()
+G=int(G)
+l = len(s)
+k=int(l/G)
+S = ''
+for i in range (G):
+    s1 = s[i*k:(i+1)*k]
+    s1 = reversed_s1 = s1[::-1]
+    S=S+s1
+print (S)
+# the code flips the line. For example you enter a line 3 123123123, then you get 321321321
