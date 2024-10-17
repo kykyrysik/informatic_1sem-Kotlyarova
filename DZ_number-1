@@ -1,3 +1,4 @@
+#  first program: the code flips the line. For example you enter a line 3 123123123, then you get 321321321
 G,s = input().split()
 G=int(G)
 l = len(s)
@@ -8,4 +9,23 @@ for i in range (G):
     s1 = reversed_s1 = s1[::-1]
     S=S+s1
 print (S)
-# the code flips the line. For example you enter a line 3 123123123, then you get 321321321
+
+# second program:tell you if your line is filled with a mirror polydrome. If you enter AAA, get yes; AMA - yes; SDA - no etc. 
+s=input()
+if "B" in s or "D" in s or "F" in s or "N" in s or "Q" in s :
+    print("no")
+elif 'C' in s or 'G' in s or 'K' in s or 'P' in s or 'R' in s :
+    print ('no')
+elif '4' in s or '6' in s or '7' in s or '9' in s :
+    print('no')
+else: 
+    s1=s.replace('E','3')
+    s1=s1.replace('J','L')
+    s1=s1.replace('S','2')
+    s1=s1.replace('Z','5')
+    s2=reversed_s1=s1[::-1]
+    if s1==s2:
+        print('yeeee')
+    else:
+        print('no')
+# Who's good? I'm good!
