@@ -68,4 +68,14 @@ p = p + l[n-1]
 for i in range (n-1):
     p= p + l[i]
 print(p)
+
+# №72 Максимум в массиве
+n = int(input())
+l = [float(x) for x in  input().split()]
+a = -float('inf')
+for i in range(n):
+    if a < l[i]:
+        a=l[i]
+print( int(a) )
+
 '''
