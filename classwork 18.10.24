@@ -59,4 +59,13 @@ for i in range(n):
     if l[i] > 0:
         k=k+1
 print(k)
+
+# №71 Циклический сдвиг вправо
+n = int(input())
+l = input().split()
+p = ''
+p = p + l[n-1]
+for i in range (n-1):
+    p= p + l[i]
+print(p)
 '''
