@@ -78,4 +78,18 @@ for i in range(n):
         a=l[i]
 print( int(a) )
 
+# №1409 Ревизия
+n = int(input())
+l = [float(x) for x in  input().split()]
+a = +float('inf')
+for i in range(n):
+    if a > l[i]:
+        a=l[i]
+
+b = +float('inf')
+for i in range(n):
+    if b > l[i] and l[i] != a:
+        b = l[i]
+print(int(a),int(b))
 '''
+# ВСЕ, все решено! урааа
