@@ -1,0 +1,42 @@
+import random
+from time import time
+import numpy as np
+import matplotlib.pyplot as plt
+
+bubble1 = []
+select = []
+insert = []
+sliyn = []
+fast = []
+
+for i in range(10, 1000, 1):
+    test = []
+    for j in range(0, i):
+        test.append(random.randint(-10, 10))
+    start_time = time()
+    bubble_sort(test)
+    bubble1.append(time() - start_time)
+    start_time = time()
+    selection_sort(test)
+    select.append(time() - start_time)
+    start_time = time()
+    insertion_sort(test)
+    insert.append(time() - start_time)
+    start_time = time()
+    merge(test)
+    sliyn.append(time() - start_time)
+    start_time = time()
+    partition(test)
+    fast.append(time() - start_time)
+
+plt.plot(bubble1, label='Пузырь', linestyle='-', color='c')
+plt.plot(select, label='Выбор', linestyle='-', color='coral')
+plt.plot(insert, label='Вставка', linestyle='-', color='magenta')
+plt.plot(sliyn, label='Слияние', linestyle='-', color='indigo')
+plt.plot(fast, label='Быстрая сортировка', linestyle='-', color='r')
+plt.grid()
+plt.xlabel('Количество элементов')
+plt.ylabel('Время выполнения')
+plt.title('Графики сортировок')
+plt.legend()
+plt.show()
