@@ -1,0 +1,94 @@
+# задача 253 Високосный год
+a=int(input())
+if (a % 4 == 0 and a % 100 !=0) or (a % 400 == 0):
+    print ("yees")
+else:
+    print("no")
+
+# задача №295 Существует ли треугольник?
+a=int(input())
+b=int(input())
+c=int(input())
+if (a < b + c) and (b<a+c) and (c<a+b):
+    print ("yes")
+else:
+    print("no")
+
+# № 3 решение уравнений
+a=float(input())
+b=float(input())
+c=float(input())
+if a == 0:
+    print(int(-c/b))
+elif (b**2 - 4*a*c) < 0:
+    print(" ")
+else:
+    D = (b**2 - 4*a*c)**0.5
+    x1 = (D - b)/(2*a)
+    x2 = (-1)*(D + b)/(2*a)
+    if x1 == x2:
+        print (int(x1))
+    else:
+        print(int(x1,x2))
+
+# №256 Ферзь
+n=int(input())
+m=int(input())
+x=int(input())
+y=int(input())
+if n==x or m==y or abs(n-x) == abs(m-y):
+    print("ye")
+else:
+    print("no")
+
+# №223 Линейный поиск -1
+n = int(input())
+l = input().split()
+x = str(input())
+k=0
+for i in range(n):
+    if l[i] == x:
+        k=k+1
+print(k)
+
+# №65 Количество положительных элементов
+n = int(input())
+l=[float(x) for x in input().split()]
+k=0
+for i in range(n):
+    if l[i] > 0:
+        k=k+1
+print(k)
+
+# №71 Циклический сдвиг вправо
+n = int(input())
+l = input().split()
+p = ''
+p = p + l[n-1]
+for i in range (n-1):
+    p= p + l[i]
+print(p)
+
+# №72 Максимум в массиве
+n = int(input())
+l = [float(x) for x in  input().split()]
+a = -float('inf')
+for i in range(n):
+    if a < l[i]:
+        a=l[i]
+print( int(a) )
+'''
+
+# №1409 Ревизия
+n = int(input())
+l = [float(x) for x in  input().split()]
+a = +float('inf')
+for i in range(n):
+    if a > l[i]:
+        a=l[i]
+
+b = +float('inf')
+for i in range(n):
+    if b > l[i] and l[i] != a:
+        b = l[i]
+print(int(a),int(b))
