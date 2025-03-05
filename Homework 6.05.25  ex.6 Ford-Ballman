@@ -1,0 +1,16 @@
+#Homework 2 semestr nomber 6 Ford Ballman
+def relax(v,u):
+    if dist(u) > dist(v) + w[v][u]:
+        dist[u] = dist(v) + w[v][u]
+        prev[u] = v
+        return True
+    return False
+
+def Ford_Belman(G,s):
+    V = len(G.keys())
+    dist = [float('inf') for i in range(V)]
+    prev = [None for i in range(V)]
+    dist[s] = 0
+    for i in range(V-1):
+        for (v,u) in edges:
+            relax(v,u)
