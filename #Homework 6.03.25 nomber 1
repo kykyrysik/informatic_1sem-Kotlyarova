@@ -1,0 +1,8 @@
+#Homework 2 semestr nomber 1
+N, M = map(int, input().split())# вершины N, ребра M
+E = []#список рёбер
+for i in range(M):# Считываем ребера
+    u, v = map(int, input().split())# граф ориентированный, значит порядок (u,v) важно
+    E.append((u, v))
+for j in E:#выкидываем столбиком
+    print(j)
