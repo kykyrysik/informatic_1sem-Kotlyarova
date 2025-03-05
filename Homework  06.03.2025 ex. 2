@@ -1,0 +1,17 @@
+# Homework 2 semestr 06.03.2025 nomber 2
+def make_matrix(N, E):
+    matrix = [[0] * N for _ in range(N)]# квадратная матрица нулей, тип пока ничего не связано
+    for u, v in E:# меняем нули на 1 где есть ребро
+        matrix[u][v] = 1
+    return matrix
+
+# Для проверки, что оно работает
+if __name__ == "__main__":
+    N, M = map(int, input().split())  # вершины N, ребра M
+    E = []
+    for _ in range(M):
+        u, v = map(int, input().split())
+        E.append((u, v))
+    matrix = make_matrix(N, E)#Матрица смежности
+    for i in matrix:
+        print(" ".join(map(str, i)))
