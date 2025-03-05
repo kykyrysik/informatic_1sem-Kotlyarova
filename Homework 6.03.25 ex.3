@@ -1,0 +1,16 @@
+#Homework 2 semestr nomber 3
+def transpose_matrix(matrix):#транспонируем матрицу смежности, чтоб поменять направление любого ориентированного ребра на противоположное
+    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+
+# Проверка на жизнеспособность
+if __name__ == "__main__":
+    N = int(input())#кол-во вершин
+
+    matrix = []#считывание матрицы смежности
+    for i in range(N):
+        N = list(map(int, input().split()))
+        matrix.append(N)
+
+    matrix1 = transpose_matrix(matrix)# транспонируем
+    for N in matrix1:
+        print(" ".join(map(str, N)))
